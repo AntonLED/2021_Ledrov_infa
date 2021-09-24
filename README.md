@@ -1,2 +1,2 @@
 # 2021_Ledrov_infa
-MIPT informatica Anton Lox, voobshe lox
+MIPT informatica Anton Lox
