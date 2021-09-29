@@ -2,13 +2,12 @@ import turtle as tl
 from random import randint
 
 tl.speed(0)
-
-number_of_turtles = 10
-steps_of_time_number = 1000
+number_of_turtles = 50
+steps_of_time_number = 100000000000
 
 dt = 1
-x_lim = 150
-y_lim = 150
+x_lim = 300
+y_lim = 300
 
 tl.penup()
 tl.shape('circle')
@@ -24,6 +23,8 @@ tl.forward(2 * x_lim)
 tl.right(90)
 tl.forward(2 * x_lim)
 tl.right(90)
+
+tl.tracer(50)
 
 positions = []
 vels = []

@@ -6,14 +6,17 @@ pygame.init()
 FPS = 30
 screen = pygame.display.set_mode((400, 400))
 
-drw.rect(screen, (255, 0, 255), (100, 100, 200, 200))
-drw.rect(screen, (0, 0, 255), (100, 100, 200, 200), 5)
-drw.polygon(screen, (255, 255, 0), [(100, 100), (200, 50),
-                                (300, 100), (100, 100)])
-drw.polygon(screen, (0, 0, 255), [(100, 100), (200, 50),
-                              (300, 100), (100, 100)], 5)
-drw.circle(screen, (0, 255, 0), (200, 175), 50)
-drw.circle(screen, (255, 255, 255), (200, 175), 50, 5)
+screen.fill([150, 150, 150])
+
+drw.circle(screen, (255, 255, 0), (200, 200), 100)
+drw.circle(screen, (255, 0, 0), (200 - 50, 200 - 40), 20)
+drw.circle(screen, (255, 0, 0), (200 + 50, 200 - 40), 15)
+drw.circle(screen, (0, 0, 0), (200 - 50, 200 - 40), 8)
+drw.circle(screen, (0, 0, 0), (200 + 50, 200 - 40), 8)
+drw.polygon(screen, "black", [(155, 237), (155, 258), (242, 258), (242, 237)])
+drw.polygon(screen, "black", [(155, 237), (155, 258), (242, 258), (242, 237)])
+drw.polygon(screen, "black", [(171, 154), (175, 145), (103, 100), (97, 109)])
+drw.polygon(screen, "black", [(222, 153), (218, 145), (277, 119), (283, 128)])
 
 pygame.display.update()
 clock = pygame.time.Clock()
@@ -21,8 +24,12 @@ finished = False
 
 while not finished:
     clock.tick(FPS)
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             finished = True
+
+    if pygame.mouse.get_pressed()[0]:
+        print(pygame.mouse.get_pos())
 
 pygame.quit()
