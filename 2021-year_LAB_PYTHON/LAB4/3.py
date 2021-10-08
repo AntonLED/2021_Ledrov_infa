@@ -17,6 +17,14 @@ surface = pygame.Surface((width, height), pygame.SRCALPHA)
 
 # функция для фона
 def background(x, y, size):
+    """
+    Функция для фона
+
+    :param x:
+    :param y:
+    :param size:
+    :return:
+    """
     dr.polygon(screen, (145, 171, 198),
                [(x, y), (x + 360 * size, y), (x + 360 * size, y + 330 * size), (x, y + 330 * size)])
     # дома слева
